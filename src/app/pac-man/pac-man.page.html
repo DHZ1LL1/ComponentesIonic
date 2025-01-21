@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Checkbox</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/inicio"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Checkbox</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <h3>Ejemplo 1</h3>
+  <ion-checkbox>Entendiste la clase</ion-checkbox>
+  <br><br>
+  <h3>Ejemplo 2</h3>
+  <ion-checkbox labelPlacement="start">Estos son</ion-checkbox>
+
+<br />
+
+<ion-checkbox labelPlacement="end">Tipos</ion-checkbox>
+
+<br />
+
+<ion-checkbox labelPlacement="fixed">De</ion-checkbox>
+
+<br />
+
+<ion-checkbox labelPlacement="stacked">Checkbox</ion-checkbox>
+<br><br>
+<h3>Ejemplo 3</h3>
+<ion-list>
+  <ion-item>
+    <ion-checkbox justify="start">Packed at the Start of Line</ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-checkbox justify="end">Packed at the End of Line</ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-checkbox justify="space-between">Space Between Label and Control</ion-checkbox>
+  </ion-item>
+</ion-list>
+</ion-content>
