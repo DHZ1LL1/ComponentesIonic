@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { defaultEquals } from '@angular/core/primitives/signals';
 
 @Component({
   selector: 'app-login',
@@ -8,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  email:String="";
+  password:String="";
+
+  constructor() {
+   }
 
   ngOnInit() {
   }
 
+  login(){
+    if (this.email === "admin") {
+      console.log("Login exitoso");
+    } else {
+      console.log("Login fallido");
+    }
+
+    if(this.password === "admin"){
+      console.log("Login exitoso");
+    } else {
+      console.log("Login fallido");
+    }  
+  }
 }
