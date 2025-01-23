@@ -2,6 +2,7 @@ import { NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { defaultEquals } from '@angular/core/primitives/signals';
 import { NgForm } from '@angular/forms';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginPage implements OnInit {
   email:String="";
   password:String="";
 
-  constructor() {
+  constructor(private navController: NavController) {
    }
 
   ngOnInit() {
@@ -39,16 +40,8 @@ export class LoginPage implements OnInit {
       return;
     }
 
-    if (this.email === "admin") {
-      console.log("Login exitoso");
-    } else {
-      console.log("Login fallido");
+    if (this.email === "admin" && this.password === "admin") {
+      this.navController.navigateForward('/home');
     }
-
-    if(this.password === "admin"){
-      console.log("Login exitoso");
-    } else {
-      console.log("Login fallido");
-    }  
   }
 }
